@@ -1,11 +1,14 @@
 syntax = "proto3";
 package dmolik.veriname.veriname;
 
+import "veriname/ident.proto";
 // this line is used by starport scaffolding # genesis/proto/import
+import "gogoproto/gogo.proto";
 
 option go_package = "github.com/dmolik/veriname/x/veriname/types";
 
 // GenesisState defines the veriname module's genesis state.
 message GenesisState {
-    // this line is used by starport scaffolding # genesis/proto/state
+    repeated Ident identList = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
 }

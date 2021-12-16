@@ -134,4 +134,36 @@ export class HttpClient {
  * @version version not set
  */
 export class Api extends HttpClient {
+    constructor() {
+        super(...arguments);
+        /**
+         * No description
+         *
+         * @tags Query
+         * @name QueryIdentAll
+         * @summary Queries a list of ident items.
+         * @request GET:/dmolik/veriname/veriname/ident
+         */
+        this.queryIdentAll = (query, params = {}) => this.request({
+            path: `/dmolik/veriname/veriname/ident`,
+            method: "GET",
+            query: query,
+            format: "json",
+            ...params,
+        });
+        /**
+         * No description
+         *
+         * @tags Query
+         * @name QueryIdent
+         * @summary Queries a ident by index.
+         * @request GET:/dmolik/veriname/veriname/ident/{index}
+         */
+        this.queryIdent = (index, params = {}) => this.request({
+            path: `/dmolik/veriname/veriname/ident/${index}`,
+            method: "GET",
+            format: "json",
+            ...params,
+        });
+    }
 }

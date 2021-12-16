@@ -11,6 +11,14 @@ import (
 
 func TestGenesis(t *testing.T) {
 	genesisState := types.GenesisState{
+		IdentList: []types.Ident{
+			{
+				Index: "0",
+			},
+			{
+				Index: "1",
+			},
+		},
 		// this line is used by starport scaffolding # genesis/test/state
 	}
 
@@ -19,5 +27,7 @@ func TestGenesis(t *testing.T) {
 	got := veriname.ExportGenesis(ctx, *k)
 	require.NotNil(t, got)
 
+	require.Len(t, got.IdentList, len(genesisState.IdentList))
+	require.Subset(t, genesisState.IdentList, got.IdentList)
 	// this line is used by starport scaffolding # genesis/test/assert
 }

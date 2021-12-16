@@ -4,13 +4,13 @@ import { StdFee } from "@cosmjs/launchpad";
 import { SigningStargateClient } from "@cosmjs/stargate";
 import { Registry, OfflineSigner, EncodeObject, DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgVerify } from "./types/veriname/tx";
 import { MsgRegister } from "./types/veriname/tx";
+import { MsgVerify } from "./types/veriname/tx";
 
 
 const types = [
-  ["/dmolik.veriname.veriname.MsgVerify", MsgVerify],
   ["/dmolik.veriname.veriname.MsgRegister", MsgRegister],
+  ["/dmolik.veriname.veriname.MsgVerify", MsgVerify],
   
 ];
 export const MissingWalletError = new Error("wallet is required");
@@ -39,8 +39,8 @@ const txClient = async (wallet: OfflineSigner, { addr: addr }: TxClientOptions =
 
   return {
     signAndBroadcast: (msgs: EncodeObject[], { fee, memo }: SignAndBroadcastOptions = {fee: defaultFee, memo: ""}) => client.signAndBroadcast(address, msgs, fee,memo),
-    msgVerify: (data: MsgVerify): EncodeObject => ({ typeUrl: "/dmolik.veriname.veriname.MsgVerify", value: data }),
     msgRegister: (data: MsgRegister): EncodeObject => ({ typeUrl: "/dmolik.veriname.veriname.MsgRegister", value: data }),
+    msgVerify: (data: MsgVerify): EncodeObject => ({ typeUrl: "/dmolik.veriname.veriname.MsgVerify", value: data }),
     
   };
 };
