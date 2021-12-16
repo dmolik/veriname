@@ -7,7 +7,20 @@ option go_package = "github.com/dmolik/veriname/x/veriname/types";
 
 // Msg defines the Msg service.
 service Msg {
-    // this line is used by starport scaffolding # proto/tx/rpc
+      rpc Register(MsgRegister) returns (MsgRegisterResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgRegister {
+  string creator = 1;
+  string alias = 2;
+  string user = 3;
+  string kind = 4;
+  string target = 5;
+  string payload = 6;
+}
+
+message MsgRegisterResponse {
 }
 
 // this line is used by starport scaffolding # proto/tx/message

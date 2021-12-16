@@ -19650,6 +19650,8 @@ definitions:
     description: >-
       MsgCreateVestingAccountResponse defines the Msg/CreateVestingAccount
       response type.
+  dmolik.veriname.veriname.MsgRegisterResponse:
+    type: object
   ibc.applications.transfer.v1.DenomTrace:
     type: object
     properties:
