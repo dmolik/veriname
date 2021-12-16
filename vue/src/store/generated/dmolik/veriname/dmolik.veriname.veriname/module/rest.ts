@@ -22,6 +22,8 @@ export interface RpcStatus {
 
 export type VerinameMsgRegisterResponse = object;
 
+export type VerinameMsgVerifyResponse = object;
+
 export type QueryParamsType = Record<string | number, any>;
 export type ResponseFormat = keyof Omit<Body, "body" | "bodyUsed">;
 

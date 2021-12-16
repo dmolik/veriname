@@ -2,8 +2,10 @@
 import { SigningStargateClient } from "@cosmjs/stargate";
 import { Registry } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
+import { MsgVerify } from "./types/veriname/tx";
 import { MsgRegister } from "./types/veriname/tx";
 const types = [
+    ["/dmolik.veriname.veriname.MsgVerify", MsgVerify],
     ["/dmolik.veriname.veriname.MsgRegister", MsgRegister],
 ];
 export const MissingWalletError = new Error("wallet is required");
@@ -19,6 +21,7 @@ const txClient = async (wallet, { addr: addr } = { addr: "http://localhost:26657
     const { address } = (await wallet.getAccounts())[0];
     return {
         signAndBroadcast: (msgs, { fee, memo } = { fee: defaultFee, memo: "" }) => client.signAndBroadcast(address, msgs, fee, memo),
+        msgVerify: (data) => ({ typeUrl: "/dmolik.veriname.veriname.MsgVerify", value: data }),
         msgRegister: (data) => ({ typeUrl: "/dmolik.veriname.veriname.MsgRegister", value: data }),
     };
 };

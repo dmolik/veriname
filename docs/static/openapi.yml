@@ -19652,6 +19652,8 @@ definitions:
       response type.
   dmolik.veriname.veriname.MsgRegisterResponse:
     type: object
+  dmolik.veriname.veriname.MsgVerifyResponse:
+    type: object
   ibc.applications.transfer.v1.DenomTrace:
     type: object
     properties:
