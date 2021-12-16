@@ -1,8 +1,8 @@
-# veriname
+# Veriname
 
-**veriname** a blockchain to verify your identity. **veriname** is a proof of concept at this time.
+**Veriname** a blockchain to verify your identity. **Veriname** is a proof of concept at this time.
 
-**veriname** is built using Cosmos SDK and Tendermint and created with [Starport](https://github.com/tendermint/starport).
+**Veriname** is built using Cosmos SDK and Tendermint and created with [Starport](https://github.com/tendermint/starport).
 
 ## Get started
 
@@ -50,10 +50,9 @@ curl https://get.starport.network/dmolik/veriname@latest! | sudo bash
 ```
 `dmolik/veriname` should match the `username` and `repo_name` of the Github repository to which the source code was pushed. Learn more about [the install process](https://github.com/allinbits/starport-installer).
 
-## Learn more
+## External Documentation
 
 - [Starport](https://github.com/tendermint/starport)
 - [Starport Docs](https://docs.starport.network)
 - [Cosmos SDK documentation](https://docs.cosmos.network)
 - [Cosmos SDK Tutorials](https://tutorials.cosmos.network)
-- [Discord](https://discord.gg/cosmosnetwork)
