@@ -1,0 +1,11 @@
+syntax = "proto3";
+package dmolik.veriname.veriname;
+
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/dmolik/veriname/x/veriname/types";
+
+// GenesisState defines the veriname module's genesis state.
+message GenesisState {
+    // this line is used by starport scaffolding # genesis/proto/state
+}
