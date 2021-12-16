@@ -1,5 +1,8 @@
 # veriname
-**veriname** is a blockchain built using Cosmos SDK and Tendermint and created with [Starport](https://github.com/tendermint/starport).
+
+**veriname** a blockchain to verify your identity. **veriname** is a proof of concept at this time.
+
+**veriname** is built using Cosmos SDK and Tendermint and created with [Starport](https://github.com/tendermint/starport).
 
 ## Get started
 
